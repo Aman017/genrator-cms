@@ -5,7 +5,7 @@ require('dotenv').config();
 const mongoURL = process.env.MONGO_URL
 async function db() {
 if(mongoose.connection.readyState=== 1){
-    console.log("alredy to connected o database, disconnecting first")
+    console.log("already to connected o database, disconnecting first")
     await mongoose.disconnect()
 }
     if(!mongoURL){
@@ -14,7 +14,7 @@ if(mongoose.connection.readyState=== 1){
 
 mongoose.connect(mongoURL).then(()=>{
     const databaseName = mongoose.connection.db.databaseName;
-    console.log(`Data base connected succesfullly to ${databaseName}`)
+    console.log(`Data base connected successfully to ${databaseName}`)
 }).catch((e)=>{
     console.log(`Error in connecting to the database: ${e.message}`)
 })
