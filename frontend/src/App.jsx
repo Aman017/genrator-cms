@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import SingUp from './pages/SingUp'
+import Login from './pages/Login'
 import { ToastContainer, toast, Flip, Bounce, Zoom } from 'react-toastify';
 
 
@@ -24,6 +25,7 @@ transition={Flip}
 />
   <Routes>
     <Route path="/" element={<div>home</div>} ></Route>
+    <Route path="/login" element={<Login/>} ></Route>
     <Route path="/register" element={<SingUp/>} ></Route>
   </Routes>
   </BrowserRouter>
