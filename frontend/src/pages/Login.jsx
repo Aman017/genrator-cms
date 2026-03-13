@@ -37,7 +37,7 @@ const Login = () => {
   } = useForm({
     resolver:zodResolver(schema),
   });
-  console.log(errors)
+
 
 
     const submitHandler = async(data)=>{

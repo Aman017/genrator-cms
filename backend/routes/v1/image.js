@@ -4,6 +4,7 @@ const router = express.Router()
 const {auth} = require('../../middleware/auth')
 
 
-router.post('/generate',auth, generateImage );
+// todo: handle auth for generate image
+router.post('/generate', generateImage );
 
 module.exports = router;
