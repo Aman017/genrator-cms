@@ -5,6 +5,6 @@ const {auth} = require('../../middleware/auth')
 
 
 // todo: handle auth for generate image
-router.post('/generate', generateImage );
+router.post('/generate', auth, generateImage );
 
 module.exports = router;
