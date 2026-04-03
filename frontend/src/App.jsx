@@ -4,6 +4,7 @@ import SingUp from './pages/SingUp'
 import Login from './pages/Login'
 import { ToastContainer, toast, Flip, Bounce, Zoom } from 'react-toastify';
 import GenerateImage from './pages/GenerateImage';
+import Rewrite from './pages/Rewrite';
 
 
 function App() {
@@ -29,6 +30,7 @@ transition={Flip}
     <Route path="/login" element={<Login/>} ></Route>
     <Route path="/register" element={<SingUp/>} ></Route>
     <Route path="/image/generate" element={<GenerateImage/>} ></Route>
+    <Route path="/content/rewrite" element={<Rewrite/>} ></Route>
   </Routes>
   </BrowserRouter>
   )

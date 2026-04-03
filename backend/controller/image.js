@@ -19,7 +19,7 @@ cloudinary.config({
 
 exports.generateImage = async (req, res) => {
     try {
-        console.log(`Started processing of image generating request for user id  `)
+        console.log(`Started processing of image generating request for user id ${req.user.id} `)
         
         const { prompt, resolution } = req.body;
         
