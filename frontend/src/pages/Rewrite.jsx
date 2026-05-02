@@ -10,6 +10,7 @@ import { MdOutlineRefresh } from "react-icons/md";
 import { FaSpinner } from "react-icons/fa";
 import { MdCopyAll } from "react-icons/md";
 import { rewriteContent } from '../services/content';
+import { toast } from 'react-toastify';
 
 
 const schema = z.object({
@@ -53,8 +54,15 @@ const Rewrite = () => {
             setIsSubmitting(false)
         }
     }
-const handleCopy = ()=>{
+const handleCopy = async ()=>{
     //write copy code or logic
+    if(!rewrittenContent) return;
+      try {
+       await window.navigator.clipboard.writeText(rewrittenContent);
+       toast.success("Content Copied successfully")
+      } catch (error) {
+        console.log(`failed to copy. Error is ${error}`)
+      }
 }
 
     return (

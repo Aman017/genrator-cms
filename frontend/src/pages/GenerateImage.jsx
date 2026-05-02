@@ -9,6 +9,7 @@ import { FaImage, FaDownload } from "react-icons/fa";
 import { IoSparkles } from "react-icons/io5";
 import { MdOutlineRefresh } from "react-icons/md";
 import { FaSpinner } from "react-icons/fa";
+import { downloadImage } from '../utils/global';
 
 
 const schema = z.object({
@@ -180,6 +181,10 @@ const GenerateImage = () => {
             <div className="flex flex-col sm:flex-row gap-3">
 
               <a
+              onClick={(e)=>{
+                e.preventDefault();
+                downloadImage(generatedImage)
+              }}
                 href={generatedImage}
                 download
                 className="flex-1 text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition flex items-center justify-center gap-2"
