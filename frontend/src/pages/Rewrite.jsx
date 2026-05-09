@@ -68,7 +68,8 @@ const handleCopy = async ()=>{
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 px-4 py-10">
 
-  <div className="text-center max-w-2xl mx-auto">
+  <div className=" max-w-6xl mx-auto">
+    <div className='text-center mb-8'>
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 flex items-center justify-center gap-2">
 
 Rewrite Content
@@ -76,6 +77,7 @@ Rewrite Content
     <p className="text-gray-500 mt-2 text-base sm:text-lg">
       Rewrite your content with AI
     </p>
+    </div>
   </div>
 
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mt-10">
